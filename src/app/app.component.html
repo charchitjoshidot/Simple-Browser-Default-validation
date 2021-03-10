@@ -1,0 +1,20 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<!-- (ngSubmit)="onSubmit(testForm)" -->
+<div>
+  <form #testForm="ngForm" ngNativeValidate>
+    <table>
+      <td>
+        <input type="text" name="fName" [(ngModel)]="fname" class="form-control" required>
+      </td>
+      <td>
+        <input type="text" name="lName" [(ngModel)]="lname" class="form-control" required>
+      </td>
+    </table>
+    <button type="submit" value="draft" (click)="onSubmit(testForm)" >Submit draft form</button>
+    <button type="submit" value="submit" >Submit form</button>
+    <button >cancel</button>
+  </form>
+</div>
